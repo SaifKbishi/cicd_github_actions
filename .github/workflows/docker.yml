@@ -22,7 +22,7 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v1
         with:
-          username: ${{ github.actor }}
+          username: ${{ secrets.DOCKERUSERNAME }}
           password: ${{ secrets.NEWCICDWGITHUBACTIONS }}
 
       - name: Build and push Docker image
