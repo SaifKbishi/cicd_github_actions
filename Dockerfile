@@ -11,4 +11,4 @@ COPY . .
 RUN pip install Flask
 
 #run the application
-CMD ["python","app.py"]"]
+CMD ["python","app.py"]
