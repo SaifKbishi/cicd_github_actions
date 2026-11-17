@@ -6,10 +6,10 @@ app = Flask(__name__)
 def hello():
     return "Hello, World!"
 
-@app.route('/DevOps', methods=['GET'])
-def devops():
-    print("hello world 02")
-    return "Hello, DevOps!"
+@app.route('/holand', methods=['GET'])
+def holand():
+    print("hello Holand")
+    return "Hello, Holand!"
 
 @app.route('/canada', methods=['GET'])
 def canada():
