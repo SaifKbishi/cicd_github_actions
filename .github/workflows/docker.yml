@@ -72,10 +72,10 @@ jobs:
           script: |
             docker pull 19820401/cicd_github_actions:latest
 
-            docker rm -f flask-app || true
+            docker rm -f cicd_github_actions || true
 
             docker run -d \
-              --name flask-app \
+              --name cicd_github_actions \
               -p 5000:5000 \
               --restart unless-stopped \
               19820401/cicd_github_actions:latest
