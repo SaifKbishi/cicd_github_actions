@@ -6,7 +6,7 @@ app = Flask(__name__)
 def hello():
     return "Hello, World!"
 
-@app.route('/devops', methods=['GET'])
+@app.route('/DevOps', methods=['GET'])
 def devops():
     print("hello world 02")
     return "Hello, DevOps!"
