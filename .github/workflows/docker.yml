@@ -79,6 +79,19 @@ jobs:
               -p 5000:5000 \
               --restart unless-stopped \
               19820401/cicd_github_actions:latest
+      - name: Check GitHub Runner SSH Access
+        env:
+          SERVER_HOST: ${{ secrets.SERVER_HOST }}
+        run: |
+          echo "Checking SSH connectivity..."
+
+          if timeout 10 bash -c 'echo > /dev/tcp/"$1"/22' _ "$SERVER_HOST"; then
+            echo "SUCCESS: EC2 port 22 is reachable"
+          else
+            echo "FAILED: EC2 port 22 is unreachable"
+            exit 1
+          fi
+          
   healthcheck:
     needs: deploy
 
