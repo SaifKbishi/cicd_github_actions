@@ -30,4 +30,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.NEWCICDWGITHUBACTIONS }}/cicd_github_actions:latest
+          tags: 19820401/cicd_github_actions:latest
+          #tags: ${{ secrets.DOCKERUSERNAME }}/cicd_github_actions:latest
